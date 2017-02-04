@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! This is Roxwel, and this is an app created in Rails. Not sure what else to write other than to warn other users that this is the first time I use Rails and Git/GitHub, so allow me to apologise beforehand in case something does go wrong here.
 
 Things you may want to cover:
 
