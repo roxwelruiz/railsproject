@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Railsproject</title>
+  <title>Paddles Up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 
@@ -11,40 +11,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
+
+  <%= render 'layouts/shim' %>
+
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top"> 
-    <div class="container">
-    <!-- responsive nav bar -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Paddle&apos;s Up</a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Purchase</a></li>
-          <li><a href="#">Sell</a></li>
-          <li><a href="#">Help</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <%= render 'layouts/navbar' %>
   <%= yield %>
-
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-text">&copy; 2017 Paddle&apos;s Up!!</p>
-    </div>
-  </footer>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
