@@ -19,7 +19,7 @@
       <tr>
         <td><%= image_tag product.image_url, class: "img-responsive center-img grey-border product-list-img"  %></td>
         <td><%= product.name %></td>
-        <td><%= product.description %></td>
+        <td class="justified"><%= product.description %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

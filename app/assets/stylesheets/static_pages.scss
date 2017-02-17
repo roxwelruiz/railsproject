@@ -50,6 +50,12 @@ body {
 /* overwriting some of bootstrap's values */
 .navbar-right { margin-right: 0; }
 
+/* a bit of padding to align the bottom boxes in index */
+.section-container { 
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 /* the bottom boxes */
 section {
 	height: 310px;
@@ -75,14 +81,9 @@ section {
 		border-top: 1px solid $grey-border;
 	}
 
-	/* a bit of padding to align the bottom boxes in index */
-	.section-container { 
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
+
+
 }
-
-
 
 /**************/
 /* footer bar */
