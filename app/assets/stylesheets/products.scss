@@ -1,0 +1,41 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*************/
+/* Variables */
+/*************/
+
+
+
+/******************/
+/* Products index */
+/******************/
+
+.product-list-img {
+	max-height: 136px;
+	max-width: 136px;
+}
+
+/***********************/
+/* Item details (show) */
+/***********************/
+
+.product-detail-row { margin-top: 40px; }
+
+.justified { text-align: justify; }
+
+/*********************/
+/* Add and Edit form */
+/*********************/
+
+/* change the width of the small container when width is greater than 768 pixels */
+@media (min-width: 768px) {
+	.small-container {
+		margin: 0 auto;
+		width: 737px;
+	}
+}
+
+/* textareas in the form do not have the bottom-right corner for resizing */
+.no-resize { resize: none; }

@@ -27,6 +27,10 @@ body {
 	padding-top: $header-footer-height;
 }
 
+.center-content { text-align: center; }
+.center-img { margin: 0 auto; }
+.grey-border { border: 1px solid $grey-border; }
+
 /******************/
 /* navigation bar */
 /******************/
@@ -45,12 +49,6 @@ body {
 
 /* overwriting some of bootstrap's values */
 .navbar-right { margin-right: 0; }
-
-/* a bit of padding to align the bottom boxes in index */
-.section-container { 
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
 
 /* the bottom boxes */
 section {
@@ -77,8 +75,14 @@ section {
 		border-top: 1px solid $grey-border;
 	}
 
-	.img-center { margin: 0 auto; }
+	/* a bit of padding to align the bottom boxes in index */
+	.section-container { 
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
 }
+
+
 
 /**************/
 /* footer bar */
@@ -87,6 +91,8 @@ section {
 .footer {
   position: absolute;
   bottom: 0;
+  right: 0;
+  left: 0;
 
   height: $header-footer-height;
   padding: 15px 0;

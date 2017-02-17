@@ -1,0 +1,14 @@
+<div class="small-container">
+  <div class="page-header">
+    <h1>Edit a Product</h1>
+  </div>
+
+	<%= render 'form', product: @product %>
+
+  <br>
+  <hr>
+	
+	<div class="center-content">
+		<%= link_to 'Show', @product %> | <%= link_to 'Back', products_path %>
+	</div>
+</div> <!-- end small-container -->

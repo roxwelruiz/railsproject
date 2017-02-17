@@ -1,45 +1,43 @@
-<div class="container">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-internal="10000">
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<%= image_tag("standup.jpg", class: "img-responsive") %>
-			</div>
-			<div class="item">
-				<%= image_tag("canoe.jpg", class: "img-responsive") %>
-			</div>
-			<div class="item">
-				<%= image_tag("kayak.jpg", class: "img-responsive") %>
-			</div>
-		</div><!-- end slides -->
-
-		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a> <!-- end left control -->
-
-		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a> <!-- end right control -->
-	</div> <!-- end carousel -->
-
-  <div class="row">
-  	<div class="col-xs-12 col-md-6 section-container">
-  		<section>
-				<h2>Welcome</h2>
-				<p>Sign in to check on orders, sales, and deals.</p>
-				<button type="button" class="btn btn-primary">Log In</button>
-				<div class="mini-footer">
-					<small>Not a member? <%= link_to "Sign Up", '#' %></small>
-				</div>
-			</section>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-internal="10000">
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<%= image_tag("standup.jpg", class: "img-responsive") %>
 		</div>
-		<div class="col-xs-12 col-md-6 section-container">
-			<section>
-				<h2>Paddle of the day</h2>
-				<p>Burnwater Reactor II</p>
-				<%= link_to image_tag("burnwater.jpg", class: "img-responsive img-center"), '#' %>
-			</section>
-		</div>				
-	</div> <!-- end row -->
-</div>
+		<div class="item">
+			<%= image_tag("canoe.jpg", class: "img-responsive") %>
+		</div>
+		<div class="item">
+			<%= image_tag("kayak.jpg", class: "img-responsive") %>
+		</div>
+	</div><!-- end slides -->
+
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a> <!-- end left control -->
+
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a> <!-- end right control -->
+</div> <!-- end carousel -->
+
+<div class="row">
+	<div class="col-xs-12 col-md-6 section-container">
+		<section>
+			<h2>Welcome</h2>
+			<p>Sign in to check on orders, sales, and deals.</p>
+			<button type="button" class="btn btn-primary">Log In</button>
+			<div class="mini-footer">
+				<small>Not a member? <%= link_to "Sign Up", '#' %></small>
+			</div>
+		</section>
+	</div>
+	<div class="col-xs-12 col-md-6 section-container">
+		<section>
+			<h2>Paddle of the day</h2>
+			<p>Burnwater Reactor II</p>
+			<%= link_to image_tag("burnwater.jpg", class: "img-responsive center-img grey-border"), '#' %>
+		</section>
+	</div>				
+</div> <!-- end row -->
