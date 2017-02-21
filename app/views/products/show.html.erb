@@ -5,12 +5,12 @@
 
 <div class="row product-detail-row">
 	<div class="col-xs-12 col-md-4">
-    <% if @product.image_url != "" %>
-      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border" %>
-    <% else %>
+    <% if (@product.image_url == "") || (@product.image_url == nil) %>
       <div class="no-big-image img-centered grey-border">
         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
       </div>
+    <% else %>
+      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border" %>
     <% end %>
 	</div> <!-- end product image -->
 
