@@ -28,7 +28,7 @@ body {
 }
 
 .center-content { text-align: center; }
-.center-img { margin: 0 auto; }
+.img-centered { margin: 0 auto; }
 .grey-border { border: 1px solid $grey-border; }
 
 /******************/
@@ -51,13 +51,13 @@ body {
 .navbar-right { margin-right: 0; }
 
 /* a bit of padding to align the bottom boxes in index */
-.section-container { 
+.column-custom-padding { 
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
 
 /* the bottom boxes */
-section {
+.index-box {
 	height: 310px;
 
 	padding: 0 15px 15px 15px;
@@ -66,23 +66,21 @@ section {
 
 	background-color: $grey-background;
 	border: 1px solid $grey-border;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
 
-	.mini-footer {
+	.sign-up-footer {
 		position: absolute;
 		bottom: 15px;
-    left: 14px;
-    right: 14px;
+	  left: 15px;
+	  right: 15px;
 
-    margin: 0 15px;
-    padding: 5px 0;
+	  margin: 0 15px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
 
 		border-top: 1px solid $grey-border;
 	}
-
-
-
 }
 
 /**************/

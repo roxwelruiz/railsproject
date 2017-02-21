@@ -6,15 +6,87 @@
 /* Variables */
 /*************/
 
+$grey-border: #e7e7e7;
+$grey-font: #777;
 
+$product-thumb-size: 150px;
+
+/***********/
+/* General */
+/***********/
+
+/* style the product's price */
+.product-price {
+	font-weight: bold;
+	color: #b12704;
+}
+
+/* justify text */
+.justified { text-align: justify; }
 
 /******************/
 /* Products index */
 /******************/
 
-.product-list-img {
-	max-height: 136px;
-	max-width: 136px;
+/* Put the products title to the left... */
+.products-title { float: left; }
+
+/* ... and the 'New Product' button to the right */
+.new-product-btn { 
+	float: right;
+  margin-top: 20px;
+}
+
+/* change the height of the product boxes when width is greater than 768 pixels */
+@media (min-width: 768px) {
+	.thumbnail {
+		height: 450px;
+	}
+}
+
+/* Style for the product boxes in the products index page */
+.thumbnail {
+	padding: 15px;
+
+	border: 1px solid $grey-border;
+
+	.caption { margin-bottom: 15px; }
+
+	.thumbnail-footer {
+		position: absolute;
+		bottom: 21px;
+	  left: 15px;
+	  right: 15px;
+
+	  margin: 0 15px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+
+	  text-align: center;
+
+		border-top: 1px solid $grey-border;
+	}
+}
+
+/* the dimensions of the images in the products index page */
+.thumbnail-img {
+	max-height: $product-thumb-size;
+	max-width: $product-thumb-size;
+}
+
+/* In case there is no image available */
+.no-image {
+	color: #ddd;
+	font-size: 60px;
+	line-height: $product-thumb-size;
+	text-align: center;
+}
+
+.no-big-image {
+	color: #ddd;
+	font-size: 120px;
+	line-height: 320px;
+	text-align: center;	
 }
 
 /***********************/
@@ -22,8 +94,6 @@
 /***********************/
 
 .product-detail-row { margin-top: 40px; }
-
-.justified { text-align: justify; }
 
 /*********************/
 /* Add and Edit form */

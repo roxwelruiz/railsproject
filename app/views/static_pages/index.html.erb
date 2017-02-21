@@ -23,21 +23,22 @@
 </div> <!-- end carousel -->
 
 <div class="row">
-	<div class="col-xs-12 col-md-6 section-container">
-		<section>
+	<div class="col-xs-12 col-md-6 column-custom-padding">
+		<section class="index-box">
 			<h2>Welcome</h2>
 			<p>Sign in to check on orders, sales, and deals.</p>
 			<button type="button" class="btn btn-primary">Log In</button>
-			<div class="mini-footer">
+			<div class="sign-up-footer">
 				<small>Not a member? <%= link_to "Sign Up", '#' %></small>
-			</div>
-		</section>
-	</div>
-	<div class="col-xs-12 col-md-6 section-container">
-		<section>
+			</div> <!-- end sign up footer -->
+		</section> <!-- end sign-up box -->
+	</div> <!-- end column -->
+	
+	<div class="col-xs-12 col-md-6 column-custom-padding">
+		<section class="index-box">
 			<h2>Paddle of the day</h2>
 			<p>Burnwater Reactor II</p>
-			<%= link_to image_tag("burnwater.jpg", class: "img-responsive center-img grey-border"), '#' %>
-		</section>
-	</div>				
+			<%= link_to image_tag("burnwater.jpg", class: "img-responsive img-centered grey-border"), '#' %>
+		</section> <!-- 'end paddle of the day' box -->
+	</div> <!-- end column -->
 </div> <!-- end row -->

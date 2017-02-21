@@ -1,18 +1,30 @@
-<p id="notice"><%= notice %></p>
+<% if notice != nil %>
+	<br>
+	<div class="alert alert-success" role="alert"><%= notice %></div>
+<% end %>
 
 <div class="row product-detail-row">
 	<div class="col-xs-12 col-md-4">
-		<%= image_tag @product.image_url, class: "img-responsive center-img grey-border" %>
-	</div>
+    <% if @product.image_url != "" %>
+      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border" %>
+    <% else %>
+      <div class="no-big-image img-centered grey-border">
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+      </div>
+    <% end %>
+	</div> <!-- end product image -->
 
 	<div class="col-xs-12 col-md-8">
 		<div class="page-header">
-		  <h1><%= @product.name %></h1>
+		  <h1><%= @product.name %> <small><%= @product.sport %></small></h1>
 		</div>
-	  
+		<h3 class="product-price"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
 	  <p class="justified"><%= @product.description %></p>
 	  <br>
-	</div>
+	  <h4>Full Item Information</h4>
+	  <p class="justified"><%= @product.detailed_description %></p>
+	  <br>
+	</div> <!-- end product information -->
 </div>
 
 <br>
@@ -20,4 +32,6 @@
 
 <div class="center-content">
 	<%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Back', products_path %>
-</div>
+</div> <!-- end bottom links -->
+
+<br>
