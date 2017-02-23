@@ -12,6 +12,8 @@ $grey-border: #e7e7e7;
 $grey-font: #777;
 $grey-background: #f8f8f8;
 
+$homepage-img-size: 200px;
+
 /***********/
 /* general */
 /***********/
@@ -81,6 +83,11 @@ body {
 
 		border-top: 1px solid $grey-border;
 	}
+}
+
+.homepage-img {
+	max-height: $homepage-img-size;
+	max-width: $homepage-img-size;
 }
 
 /**************/
