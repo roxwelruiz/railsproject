@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
 
   #root 'static_pages#index'
-  root 'static_pages#landing_page'
+  root 'static_pages#preindex'
 
+  get '/main', to: 'static_pages#go_to_main'
+  get '/index', to: 'static_pages#index'
   get '/about', to: 'static_pages#about'
 	get '/contact', to: 'static_pages#contact'
 

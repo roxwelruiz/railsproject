@@ -23,7 +23,7 @@ html {
   min-height: 100%;	
 }
 
-/* adjust the body to accommodate the navbar and the footer*/
+/* adjust the body to accommodate the navbar and the footer */
 body {
 	margin-bottom: $header-footer-height;
 	padding-top: $header-footer-height;
@@ -88,6 +88,15 @@ body {
 .homepage-img {
 	max-height: $homepage-img-size;
 	max-width: $homepage-img-size;
+}
+
+/*************/
+/* preindex */
+/************/
+
+.custom-jumbotron {
+	background-color: $grey-background;
+	border: 1px solid $grey-border;
 }
 
 /***************************/
