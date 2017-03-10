@@ -39,9 +39,18 @@
 			<h2>Newest Paddles</h2>
 			<div id="carousel-products" class="carousel slide" data-ride="carousel" data-internal="9000">
 				<div class="carousel-inner" role="listbox">
-					<%= render 'shared/product_carousel' %>
+					<% @products.each do |product| %>
+						<div class="item <%= 'active' if product == @products.first %>">
+							<%= image_tag(product.image_url, class: "img-responsive img-centered grey-border carousel-img-height") %>
+							<div class="carousel-caption">
+								<h4><%= product.name %></h4>
+							</div>
+						</div>
+					<% end %>
 				</div><!-- end slides -->
 			</div> <!-- end carousel -->
 		</section> <!-- end 'newest paddles' box -->
 	</div> <!-- end column -->
 </div> <!-- end row -->
+
+<%= params[:example_key].to_i * 10 %>
