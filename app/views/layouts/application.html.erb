@@ -34,7 +34,6 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <%= form_tag "/products", method: "get", class: "navbar-form navbar-left" do %>
-          <%#= label_tag(:q, "Search for:") %>
           <%= text_field_tag :q, "", :class => "form-control", placeholder: "Search a paddle..." %>
           <%= submit_tag "Search", class: "btn btn-default" %>
         <% end %>
