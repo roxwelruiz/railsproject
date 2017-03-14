@@ -25,14 +25,31 @@
 <div class="row">
 	<div class="col-xs-12 col-md-6 column-custom-padding">
 		<section class="index-box">
-			<h2>Welcome</h2>
-			<p>Sign in to check on orders, sales, and deals.</p>
-			<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
-			<p class="notice"><%= notice %></p>
-  		<p class="alert"><%= alert %></p>
-			<div class="sign-up-footer">
-				<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
-			</div> <!-- end sign up footer -->
+			<% if not user_signed_in? %>
+
+		    <% if notice=="" or notice==nil %>
+		    	<h2>Welcome!!!</h2>
+		    <% else %>
+		    	<h2><%= notice %></h2>
+		    <% end %>
+
+				<p>Sign in to check on orders, sales, and deals.</p>
+				<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+
+				<p class="alert"><%= alert %></p>
+
+				<div class="sign-up-footer">
+					<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
+				</div> <!-- end sign up footer -->
+
+			<% else %>
+
+				<h2>Welcome Back!!!</h2>
+				<p class="notice"><%= notice %></p>
+	  		<p class="alert"><%= alert %></p>
+
+			<% end %>
+
 		</section> <!-- end sign-up box -->
 	</div> <!-- end column -->
 	
