@@ -27,9 +27,11 @@
 		<section class="index-box">
 			<h2>Welcome</h2>
 			<p>Sign in to check on orders, sales, and deals.</p>
-			<button type="button" class="btn btn-primary">Log In</button>
+			<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+			<p class="notice"><%= notice %></p>
+  		<p class="alert"><%= alert %></p>
 			<div class="sign-up-footer">
-				<small>Not a member? <%= link_to "Sign Up", '#' %></small>
+				<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
 			</div> <!-- end sign up footer -->
 		</section> <!-- end sign-up box -->
 	</div> <!-- end column -->
@@ -52,5 +54,3 @@
 		</section> <!-- end 'newest paddles' box -->
 	</div> <!-- end column -->
 </div> <!-- end row -->
-
-<%= params[:example_key].to_i * 10 %>
