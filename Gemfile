@@ -63,3 +63,6 @@ end
 
 # use Devise for the user
 gem 'devise'
+
+# use CanCanCan for authorization
+gem 'cancancan', '~> 1.10'

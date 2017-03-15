@@ -1,3 +1,11 @@
+<% if notice != nil %>
+	<div class="alert alert-info modified-alert" id="notice" role="alert"><%= notice %></div>
+<% end %>
+
+<% if alert != nil %>
+	<div class="alert alert-danger modified-alert" id="alert" role="alert"><%= alert %></div>
+<% end %>
+
 <div id="carousel-banner" class="carousel slide" data-ride="carousel" data-internal="12000">
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
@@ -26,30 +34,15 @@
 	<div class="col-xs-12 col-md-6 column-custom-padding">
 		<section class="index-box">
 			<% if not user_signed_in? %>
-
-		    <% if notice=="" or notice==nil %>
-		    	<h2>Welcome!!!</h2>
-		    <% else %>
-		    	<h2><%= notice %></h2>
-		    <% end %>
-
+		    <h2>Hello There!!!</h2>
 				<p>Sign in to check on orders, sales, and deals.</p>
 				<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
-
-				<p class="alert"><%= alert %></p>
-
 				<div class="sign-up-footer">
 					<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
 				</div> <!-- end sign up footer -->
-
 			<% else %>
-
 				<h2>Welcome Back!!!</h2>
-				<p class="notice"><%= notice %></p>
-	  		<p class="alert"><%= alert %></p>
-
 			<% end %>
-
 		</section> <!-- end sign-up box -->
 	</div> <!-- end column -->
 	

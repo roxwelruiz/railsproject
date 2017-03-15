@@ -52,6 +52,11 @@ body {
 /* overwriting some of bootstrap's values */
 .navbar-right { margin-right: 0; }
 
+.modified-alert {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
 /* a bit of padding to align the bottom boxes in index */
 .column-custom-padding { 
 	padding-top: 15px;

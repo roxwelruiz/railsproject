@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if notice != nil %>
+  <br>
+  <div class="alert alert-info" id="notice" role="alert"><%= notice %></div>
+<% end %>
 
 <h1>Users</h1>
 

@@ -3,7 +3,10 @@
 	  <h1>Contact</h1>
 	</div>
 
-	<%= flash[:notice] %>
+  <% if flash[:notice] %>
+    <br>
+    <div class="alert alert-info" id="notice" role="alert"><%= flash[:notice] %></div>
+  <% end %>
 
 	<%= form_tag("/message_sent") do %>
     <div class="form-group">
