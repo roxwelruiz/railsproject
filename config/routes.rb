@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
 
   resources :users
-  resources :products
+
+  # nesting the comments resource with the products resource
+  resources :products do
+    resources :comments
+  end
+  
   resources :orders, only: [:index, :show, :create, :destroy]
 
   root 'static_pages#index'
