@@ -2,6 +2,8 @@ class Product < ApplicationRecord
 	has_many :orders
 	has_many :comments
 
+	validates :name, presence: true
+
 	def self.search(search_str)
 		if Rails.env.development?
 			like_operator = "LIKE"
