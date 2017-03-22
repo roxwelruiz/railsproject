@@ -57,7 +57,7 @@ $product-thumb-size: 150px;
   }
 
   .disabled {
-  	color: #777;
+  	color: $grey-font;
   	cursor: not-allowed;
   }
 
@@ -138,6 +138,8 @@ $product-thumb-size: 150px;
 /***********************/
 
 .product-detail-row { margin-top: 40px; }
+
+.delete-comment-right { float: right; }
 
 /*********************/
 /* Add and Edit form */

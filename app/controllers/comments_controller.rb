@@ -16,6 +16,13 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
+		@comment = Comment.find(params[:id])
+		product = @comment.product
+
+		authorize! :destroy, @comment, :message => "You are not authorized to remove comments."
+
+		@comment.destroy
+		redirect_to product
 	end
 
 	private
