@@ -1,4 +1,4 @@
-<div class="sign-up-container">
+<div class="mini-container">
   <div class="page-header">
     <h1>Please Sign Up</h1>
   </div>
@@ -7,7 +7,7 @@
     <%= devise_error_messages! %>
 
     <div class="field form-group">
-      <%= f.label :email %>
+      <%= f.label :email, "E-Mail Address" %>
       <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "ex: name@domain.com" %>
     </div>
 
@@ -26,8 +26,10 @@
       <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
     </div>
 
+    <br>
+
     <div class="actions center-content">
-      <%= f.submit "Sign up", class: "btn btn-primary" %> 
+      <%= f.submit "Sign Up", class: "btn btn-lg btn-block btn-primary" %> 
     </div>
   <% end %>
 
@@ -38,6 +40,6 @@
     <%= render "devise/shared/links" %>
   </div>
 
-</div> <!-- end signup-container -->
+</div> <!-- end mini-container -->
 
 <br>

@@ -1,6 +1,18 @@
-<h1>Editing User</h1>
+<div class="mini-container">
 
-<%= render 'form', user: @user %>
+  <div class="page-header">
+    <h1>Editing User</h1>
+  </div> <!-- end page header -->
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+	<%= render 'form', user: @user %>
+
+  <br>
+  <hr>
+  
+  <div class="center-content">
+		<%= link_to 'Show', @user %> | <%= link_to 'Back', :back %>
+  </div>
+
+</div> <!-- end small-container -->
+
+<br>

@@ -46,6 +46,22 @@ body {
 				background-color: #337ab7;
 			}
 		}
+
+		> li.open {
+			> a, > a:hover, > a:focus {
+				color: white;
+				background-color: #337ab7;
+			}
+		}
+
+		.dropdown-menu {
+			> li {
+				> a:hover, >a:focus {
+				color: white;
+				background-color: #337ab7;					
+				}
+			}
+		}
 	}
 }
 
@@ -95,6 +111,21 @@ body {
 	max-width: $homepage-img-size;
 }
 
+/* used for login, sign-up, password reset, and other small forms */
+.mini-container {
+	margin: 0 auto;
+	max-width: 330px;
+}
+
+/* a small change to the general text look. it can be seen in the about and message_sent pages */
+.bigger-text {
+	font-size: 1.75em;
+	font-weight: 300;
+
+	a { font-weight: normal; }
+}
+
+
 /*************/
 /* preindex */
 /************/
@@ -115,11 +146,6 @@ body {
 /****************/
 /* sign_up page */
 /****************/
-
-.sign-up-container, .log-in-container {
-	margin: 0 auto;
-	max-width: 330px;
-}
 
 .double-content {
 	margin-bottom: 5px;
@@ -158,17 +184,6 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 	}
-}
-
-/*********************/
-/* message_sent page */
-/*********************/
-
-.thank-you {
-	font-size: 1.75em;
-	font-weight: 300;
-
-	a { font-weight: normal; }
 }
 
 /**************/

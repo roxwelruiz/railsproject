@@ -41,7 +41,7 @@
 					<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
 				</div> <!-- end sign up footer -->
 			<% else %>
-				<h2>Welcome Back!!!</h2>
+				<h2>Welcome Back, <%= current_user.first_name %>!!!</h2>
 			<% end %>
 		</section> <!-- end sign-up box -->
 	</div> <!-- end column -->

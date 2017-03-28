@@ -1,17 +1,39 @@
-<% if notice != nil %>
-	<br>
-	<div class="alert alert-info" id="notice" role="alert"><%= notice %></div>
-<% end %>
+<div class="small-container">
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+	<% if notice != nil %>
+		<br>
+		<div class="alert alert-info" id="notice" role="alert"><%= notice %></div>
+	<% end %>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+  <div class="page-header">
+    <h1>User Profile</h1>
+  </div> <!-- end page header -->
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">First Name</h3>
+	  </div>
+	  <div class="panel-body">
+	    <%= @user.first_name %>
+	  </div>
+	</div>
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Last Name</h3>
+	  </div>
+	  <div class="panel-body">
+	    <%= @user.last_name %>
+	  </div>
+	</div>
+
+  <br>
+  <hr>
+  
+  <div class="center-content">
+		<%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', :back %>
+  </div>
+
+</div> <!-- end small-container -->
+
+<br>
