@@ -43,6 +43,9 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # install RSpec
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
