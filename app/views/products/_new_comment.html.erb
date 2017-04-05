@@ -7,15 +7,15 @@
 			</div>
 
 			<%= form_for([@product, @product.comments.build]) do |f| %>
-				<div class="field form-group">
+				<div class="form-group">
 					<%= f.label :title, "Review Title" %>
 					<%= f.text_field "title", class: "form-control" %>
 				</div>
-				<div class="field form-group">
+				<div class="form-group">
 					<%= f.label :body, "Comments" %>
 					<%= f.text_area :body, class: "form-control no-resize", rows: "6" %>
 				</div>
-				<div class="field form-group">
+				<div class="form-group">
 					<%= f.label :rating %>
 					<div class="rating"></div>
 				</div>

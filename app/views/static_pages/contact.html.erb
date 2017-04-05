@@ -3,14 +3,10 @@
 	  <h1>Contact</h1>
 	</div>
 
-  <% if flash[:notice] %>
-    <br>
-    <div class="alert alert-info" id="notice" role="alert"><%= flash[:notice] %></div>
-  <% end %>
-
   <p class="bigger-text justified">If you have any questions, concerns, comments, or suggestions, then feel free to send us a message and we will get back to you as soon as we can.
   </p>
 
+  <div id="error_message"></div>
   <br>
 
 	<%= form_tag("/message_sent") do %>
@@ -28,7 +24,7 @@
     </div>
 
 	  <div class="center-content">
-	    <%= submit_tag "Send", class: "btn btn-primary" %>   
+	    <%= submit_tag "Send", class: "btn btn-primary", id: "contact-button"%>   
 	  </div>
 	<% end %>
 
