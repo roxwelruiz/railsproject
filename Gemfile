@@ -46,6 +46,9 @@ group :development, :test do
 
   # install RSpec
   gem 'rspec-rails', '~> 3.5'
+
+  # install gem for functional tests
+  gem 'rails-controller-testing'
 end
 
 group :development do
