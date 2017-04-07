@@ -49,6 +49,9 @@ group :development, :test do
 
   # install gem for functional tests
   gem 'rails-controller-testing'
+
+  # install the factory girls rails plugin
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do

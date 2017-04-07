@@ -3,8 +3,8 @@ require 'rails_helper'
 describe Comment do
 	context 'when a comment is created' do
 		before do
-			@product = Product.create!(name: "mountain bike")
-			@user = User.create!(email: "test@test.com", password: "testing", first_name: "tester")
+			@product = FactoryGirl.create(:product)
+			@user = FactoryGirl.create(:user)
 		end
 
 		it 'is not valid' do
