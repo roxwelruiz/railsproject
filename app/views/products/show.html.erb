@@ -14,9 +14,18 @@
 		  <h1><%= @product.name %> <small><%= @product.sport %></small></h1>
 		  <div class="rated" data-score="<%= @product.average_rating %>"></div>
 		</div>
-		<h3 class="product-price"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
+		<div class="price-details">
+			<h3 class="product-price inline-text"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
+			<%= form_tag "/payments/create", class: "button-right" do %>
+			  <%= render 'shared/stripe_checkout_button' %>
+			<% end %>
+		</div>
+		<div class="clearfix"></div>
+
+		<br>
 	  <p class="justified"><%= @product.description %></p>
 	  <br>
+	  
 	  <h4>Full Item Information</h4>
 	  <p class="justified"><%= @product.detailed_description %></p>
 	  <br>

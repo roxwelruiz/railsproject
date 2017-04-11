@@ -141,6 +141,15 @@ $product-thumb-size: 150px;
 
 .delete-comment-right { float: right; }
 
+.price-details {
+	.inline-text { display: inline-block; }
+	.button-right { 
+		float: right;
+
+		margin-top: 17px;
+	}
+}
+
 /*********************/
 /* Add and Edit form */
 /*********************/

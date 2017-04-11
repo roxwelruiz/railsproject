@@ -78,3 +78,6 @@ gem 'cancancan', '~> 1.10'
 
 # use will_paginate for... pagination
 gem 'will_paginate', '~> 3.1.0'
+
+# installing stripe
+gem 'stripe'
