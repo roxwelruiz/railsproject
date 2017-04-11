@@ -16,8 +16,10 @@
 		</div>
 		<div class="price-details">
 			<h3 class="product-price inline-text"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
-			<%= form_tag "/payments/create", class: "button-right" do %>
-			  <%= render 'shared/stripe_checkout_button' %>
+			<% if signed_in? %>
+				<%= form_tag "/payments/create", class: "button-right" do %>
+				  <%= render 'shared/stripe_checkout_button' %>
+				<% end %>
 			<% end %>
 		</div>
 		<div class="clearfix"></div>
