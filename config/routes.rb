@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 	get '/contact', to: 'static_pages#contact'
  
 	post '/message_sent', to: 'static_pages#message_sent'
+  post '/payments/create', to: 'payments#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

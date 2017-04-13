@@ -18,6 +18,7 @@
 			<h3 class="product-price inline-text"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
 			<% if signed_in? %>
 				<%= form_tag "/payments/create", class: "button-right" do %>
+					<%= hidden_field_tag(:product_id, @product.id) %>
 				  <%= render 'shared/stripe_checkout_button' %>
 				<% end %>
 			<% end %>

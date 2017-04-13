@@ -73,12 +73,12 @@
   <!-- end navigation bar -->
 
   <div class="container">
-    <% if notice != nil %>
-      <div class="alert alert-info modified-alert" id="notice" role="alert"><%= notice %></div>
+    <% if flash[:notice] != nil %>
+      <div class="alert alert-info modified-alert" id="notice" role="alert"><%= flash[:notice] %></div>
     <% end %>
 
-    <% if alert != nil %>
-      <div class="alert alert-danger modified-alert" id="alert" role="alert"><%= alert %></div>
+    <% if flash[:alert] != nil %>
+      <div class="alert alert-danger modified-alert" id="alert" role="alert"><%= flash[:alert] %></div>
     <% end %>
 
     <%= yield %>
