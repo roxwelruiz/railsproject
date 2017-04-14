@@ -5,11 +5,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    byebug
+
     if params[:q]
       search_str = params[:q]
       @products = Product.search(search_str)
+
+      logger.debug "Retrieving items containing '#{search_str}'."
     else
       @products = Product.all
+      logger.debug "Retrieving all items."
     end
 
     # the magical pagination!!
