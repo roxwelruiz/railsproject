@@ -11,7 +11,8 @@ class Product < ApplicationRecord
 			like_operator = "ilike"
 		end
 
-		Product.where("name #{like_operator} ?", "%#{search_str}%")
+		Product.where("name #{like_operator} ?", "%#{sanitize_sql_like(search_str)}%")
+		#Product.where("name #{like_operator} ?", "%#{search_str}%")
 	end
 
 	def highest_rating_comment

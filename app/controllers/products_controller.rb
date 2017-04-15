@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    byebug
+    #byebug
 
     if params[:q]
       search_str = params[:q]
