@@ -15,6 +15,7 @@ $(document).on('turbolinks:load', function() {
   	}
   });
 
+  // the code for the contact message form
   $('#contact-button').on('click', function() {
     $('#error_message').html('');
     $('#message').css('border', '');
@@ -42,4 +43,12 @@ $(document).on('turbolinks:load', function() {
     else
       return true;
   });
+
+  // elevate zoom
+  $('.img-zoom').elevateZoom({
+      zoomType: 'inner',
+      zoomWindowFadeIn: 500,
+      zoomWindowFadeOut: 500,
+      cursor: 'crosshair'
+    });
 });
