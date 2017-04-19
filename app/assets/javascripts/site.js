@@ -1,21 +1,27 @@
-$(document).on('turbolinks:load', function() {
-
+$(document).on('turbolinks:load ajaxSuccess', function() {
 	// code for the index's alerts and notices
-  $(".modified-alert").delay(10000).slideUp(500);
+  $(".modified-alert").slideDown(500).delay(10000).slideUp(500);
 
+  refreshProductRating();
+  validateContactMessage();
+  addZoomToProductImage();
+});
+
+var refreshProductRating = function() {
   // code for the new comment rating
   $('.rating').raty({path: '/assets', scoreName: 'comment[rating]'});
 
   // code for the comments already rated
   $('.rated').raty({
-  	path: '/assets',
-  	readOnly: true,
-  	score: function() {
-  		return $(this).attr('data-score');
-  	}
-  });
+    path: '/assets',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });  
+}
 
-  // the code for the contact message form
+var validateContactMessage = function () {
   $('#contact-button').on('click', function() {
     $('#error_message').html('');
     $('#message').css('border', '');
@@ -43,12 +49,13 @@ $(document).on('turbolinks:load', function() {
     else
       return true;
   });
+};
 
-  // elevate zoom
+var addZoomToProductImage = function () {
   $('.img-zoom').elevateZoom({
-      zoomType: 'inner',
-      zoomWindowFadeIn: 500,
-      zoomWindowFadeOut: 500,
-      cursor: 'crosshair'
-    });
-});
+    zoomType: 'inner',
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 500,
+    cursor: 'crosshair'
+  });
+};
