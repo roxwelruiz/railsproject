@@ -1,39 +1,41 @@
-<div class="row product-detail-row">
-	<div class="col-xs-12 col-md-4">
-    <% if (@product.image_url == "") || (@product.image_url == nil) %>
-      <div class="no-big-image img-centered grey-border">
-        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
-      </div>
-    <% else %>
-      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border img-zoom", data_zoom_image: @product.image_url %>
-    <% end %>
-	</div> <!-- end product image -->
+<% cache @product do %>
+	<div class="row product-detail-row">
+		<div class="col-xs-12 col-md-4">
+	    <% if (@product.image_url == "") || (@product.image_url == nil) %>
+	      <div class="no-big-image img-centered grey-border">
+	        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+	      </div>
+	    <% else %>
+	      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border img-zoom", data_zoom_image: @product.image_url %>
+	    <% end %>
+		</div> <!-- end product image -->
 
-	<div class="col-xs-12 col-md-8">
-		<div class="page-header">
-		  <h1><%= @product.name %> <small><%= @product.sport %></small></h1>
-		  <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
-		</div>
-		<div class="price-details">
-			<h3 class="product-price inline-text"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
-			<% if signed_in? %>
-				<%= form_tag "/payments/create", class: "button-right" do %>
-					<%= hidden_field_tag(:product_id, @product.id) %>
-				  <%= render 'shared/stripe_checkout_button' %>
+		<div class="col-xs-12 col-md-8">
+			<div class="page-header">
+			  <h1><%= @product.name %> <small><%= @product.sport %></small></h1>
+			  <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
+			</div>
+			<div class="price-details">
+				<h3 class="product-price inline-text"><%= number_to_currency(@product.price, format: "%u %n") %></h3>
+				<% if signed_in? %>
+					<%= form_tag "/payments/create", class: "button-right" do %>
+						<%= hidden_field_tag(:product_id, @product.id) %>
+					  <%= render 'shared/stripe_checkout_button' %>
+					<% end %>
 				<% end %>
-			<% end %>
-		</div>
-		<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
 
-		<br>
-	  <p class="justified"><%= @product.description %></p>
-	  <br>
-	  
-	  <h4>Full Item Information</h4>
-	  <p class="justified"><%= @product.detailed_description %></p>
-	  <br>
-	</div> <!-- end product information -->
-</div>
+			<br>
+		  <p class="justified"><%= @product.description %></p>
+		  <br>
+		  
+		  <h4>Full Item Information</h4>
+		  <p class="justified"><%= @product.detailed_description %></p>
+		  <br>
+		</div> <!-- end product information -->
+	</div>
+<% end %>
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>		

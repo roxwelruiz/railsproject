@@ -9,7 +9,9 @@
 </div> <!-- end page header -->
 
 <div class="row">
-  <%= render @products %>
+	<% cache(cache_key_for_products) do %>
+  	<%= render @products %>
+  <% end %>
 </div> <!-- end row -->
 
 <div class="center-content">
