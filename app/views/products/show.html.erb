@@ -1,4 +1,4 @@
-<% cache @product do %>
+<%# cache @product do %>
 	<div class="row product-detail-row">
 		<div class="col-xs-12 col-md-4">
 	    <% if (@product.image_url == "") || (@product.image_url == nil) %>
@@ -8,6 +8,9 @@
 	    <% else %>
 	      <%= image_tag @product.image_url, class: "img-responsive img-centered grey-border img-zoom", data_zoom_image: @product.image_url %>
 	    <% end %>
+	    <button class="btn btn-default btn-lg btn-block views" disabled="disabled"type="button">
+  			Views <span class="badge"><%= @product.get_viewcount %></span>
+			</button>
 		</div> <!-- end product image -->
 
 		<div class="col-xs-12 col-md-8">
@@ -35,7 +38,7 @@
 		  <br>
 		</div> <!-- end product information -->
 	</div>
-<% end %>
+<%# end %>
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>		

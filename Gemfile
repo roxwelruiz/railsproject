@@ -84,3 +84,9 @@ gem 'stripe'
 
 # installing memcache
 gem 'dalli'
+
+# installing redis
+gem 'redis-rails'
+
+# installing New Relic
+gem 'newrelic_rpm'

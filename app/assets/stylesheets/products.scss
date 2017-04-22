@@ -139,6 +139,12 @@ $product-thumb-size: 150px;
 
 .product-detail-row { margin-top: 40px; }
 
+.views[disabled] { 
+	margin-top: 20px;
+	cursor: default;
+	opacity:1;
+}
+
 .delete-comment-right { float: right; }
 
 .price-details {
