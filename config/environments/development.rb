@@ -55,4 +55,8 @@ Rails.application.configure do
 
   # Defines default url options in your environments files
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Tell the rails generator to generate plain Javascript files instead of 
+  # CoffeeScript files.
+  config.app_generators.javascript_engine = :javascript
 end

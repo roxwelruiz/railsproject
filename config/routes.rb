@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   
   resources :orders, only: [:index, :show, :create, :destroy]
 
+  mount ActionCable.server => '/cable'
+
   root 'static_pages#index'
   #root 'static_pages#preindex'
 
