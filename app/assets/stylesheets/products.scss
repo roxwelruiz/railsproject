@@ -6,7 +6,8 @@
 /* Variables */
 /*************/
 
-$grey-border: #e7e7e7;
+//$grey-border: #e7e7e7;
+$grey-border: #d5d5d5;
 $grey-font: #777;
 
 $product-thumb-size: 150px;
@@ -35,14 +36,14 @@ $product-thumb-size: 150px;
     padding: 6px 12px;
     line-height: 1.42857143;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid $grey-border;
   }
 
   >a {
 	  &:focus, &:hover {
 		  z-index: 2;
 		  background-color: #eee;
-		  border-color: #ddd;  	
+		  border-color: $grey-border;
 		}
   }
 
@@ -84,7 +85,7 @@ $product-thumb-size: 150px;
 /* change the height of the product boxes when width is greater than 768 pixels */
 @media (min-width: 768px) {
 	.thumbnail {
-		height: 450px;
+		height: 470px;
 	}
 }
 
@@ -141,6 +142,9 @@ $product-thumb-size: 150px;
 
 .views[disabled] { 
 	margin-top: 20px;
+
+	border-color: $grey-border;
+
 	cursor: default;
 	opacity:1;
 }

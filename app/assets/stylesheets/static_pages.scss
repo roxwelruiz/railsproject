@@ -7,11 +7,9 @@
 /*************/
 
 $header-footer-height: 50px;
-
-$grey-border: #e7e7e7;
+$grey-border: #d5d5d5;
 $grey-font: #777;
 $grey-background: #f8f8f8;
-
 $homepage-img-size: 200px;
 
 /***********/
@@ -29,6 +27,9 @@ body {
 	padding-top: $header-footer-height;
 }
 
+// make the hr tag darker
+hr, .page-header, .panel-default { border-color: $grey-border; }
+
 .center-content { text-align: center; }
 .img-centered { margin: 0 auto; }
 .grey-border { border: 1px solid $grey-border; }
@@ -39,6 +40,8 @@ body {
 
 /* change the hover style on the nav buttons */
 .navbar-default {
+	border-color: $grey-border;
+
 	.navbar-nav {
 		> li {
 			> a:hover {
@@ -73,44 +76,6 @@ body {
 	border-radius: 0;
 }
 
-/* a bit of padding to align the bottom boxes in index */
-.column-custom-padding { 
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-
-/* the bottom boxes */
-.index-box {
-	height: 310px;
-
-	padding: 0 15px 15px 15px;
-
-	text-align: center;
-
-	background-color: $grey-background;
-	border: 1px solid $grey-border;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-
-	.sign-up-footer {
-		position: absolute;
-		bottom: 15px;
-	  left: 15px;
-	  right: 15px;
-
-	  margin: 0 15px;
-	  padding-top: 10px;
-	  padding-bottom: 10px;
-
-		border-top: 1px solid $grey-border;
-	}
-}
-
-.homepage-img {
-	max-height: $homepage-img-size;
-	max-width: $homepage-img-size;
-}
-
 /* used for login, sign-up, password reset, and other small forms */
 .mini-container {
 	margin: 0 auto;
@@ -125,22 +90,69 @@ body {
 	a { font-weight: normal; }
 }
 
+/**************/
+/* index page */
+/**************/
 
-/*************/
-/* preindex */
-/************/
-
-.custom-jumbotron {
-	background-color: $grey-background;
-	border: 1px solid $grey-border;
+/* change the height of the product boxes when width is greater than 425 pixels */
+@media (min-width: 425px) {
+	.index-box {
+		height: 310px;
+	}
 }
 
-/***************************/
-/* home page item carousel */
-/***************************/
+@media (max-width: 425px) {
+	.index-box {
+		height: 375px;
+	}
+}
 
+// small carousel
 .carousel-img-height {
 	max-height: 230px;
+}
+
+/* a bit of padding to align the bottom boxes in index */
+.column-custom-padding { 
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/* the bottom boxes */
+.index-box {
+	padding: 0 15px 15px 15px;
+
+	text-align: center;
+
+	background-color: $grey-background;
+	border: 1px solid $grey-border;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+
+	p {
+		padding: 5px 10px;  
+		font-size: 1.2em; 
+	}
+
+	.sign-up-footer {
+		position: absolute;
+		bottom: 15px;
+	  left: 15px;
+	  right: 15px;
+
+	  margin: 0 15px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+
+		border-top: 1px solid $grey-border;
+	}
+
+	.log-in-btn { margin-top: 10px; }
+}
+
+.homepage-img {
+	max-height: $homepage-img-size;
+	max-width: $homepage-img-size;
 }
 
 /****************/

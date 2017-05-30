@@ -27,19 +27,29 @@
 		<section class="index-box">
 			<% if not user_signed_in? %>
 		    <h2>Hello There!!!</h2>
-				<p>Sign in to check on orders, sales, and deals.</p>
-				<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+		    <p class="justified">Welcome to Paddles Up! Your one-stop for all things about paddles!</p>
+		    <p class="justified">Feel free to browse some of our products, or leave us a comment or suggestion.</p>
+				<%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg log-in-btn" %>
 				<div class="sign-up-footer">
-					<small>Not a member? <%= link_to "Sign Up", new_user_registration_path %></small>
+					Not a member? <%= link_to "Sign Up", new_user_registration_path %>
 				</div> <!-- end sign up footer -->
 			<% else %>
-				<h2>Welcome Back, <%= current_user.first_name %>!!!</h2>
+				<% if not current_user.first_name == '' %>
+					<h2>Ahoy, <%= current_user.first_name %>!!!</h2>
+			    <p class="justified">Welcome to Paddles Up! Your one-stop for all things about paddles!</p>
+			    <p class="justified">Now that you are logged in, you can not only browse our great variety of products, but also make purchases, as well as rate and comment on your favourite items!</p>					
+				<% else %>
+					<h2>Welcome Back... uhmmmm...</h2>				
+			    <p class="justified">I am terribly sorry, but I do not think we got your name...</p>
+			    <p class="justified">Whenever you have a few seconds to spare, go to your profile and give us your name. That way, we will definitely not forget it. Thank you very much!</p>
+					<%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary btn-lg log-in-btn" %>			    
+				<% end %>
 			<% end %>
 		</section> <!-- end sign-up box -->
 	</div> <!-- end column -->
 	
 	<div class="col-xs-12 col-md-6 column-custom-padding">
-		<section class="index-box">
+		<section class="index-box ibp">
 			<h2>Newest Paddles</h2>
 			<div id="carousel-products" class="carousel slide" data-ride="carousel" data-internal="9000">
 				<div class="carousel-inner" role="listbox">
